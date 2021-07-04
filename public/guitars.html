@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Music Center Demo</title>
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.css" rel="stylesheet">
+  <!-- Fontawesome core CSS -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <!--GOOGLE FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!--Slide Show Css -->
+  <link href="main-style.css" rel="stylesheet" />
+  <!-- custom CSS here -->
+  <link href="style.css" rel="stylesheet" />
+
+  <style>
+    .dropbtn {
+      background-color: #3498DB;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: #2980B9;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content form {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content form:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+
+    }
+
+    .show {
+      display: block;
+    }
+
+
+
+
+    .content {
+      padding-top: 2.5vw;
+
+      padding-left: 2.25vw;
+    }
+
+    .right {
+      margin-left: 17.425vw;
+      padding-right: 0.3vw;
+      height: 98%;
+
+      padding-top: 2.25vw;
+    }
+
+    .right .h2,
+    .h3 {
+      font-size: 120%;
+
+      font-weight: bold;
+
+
+    }
+
+    .right .ingre {
+      font-size: 0.975vw;
+      padding-bottom: 0.375vw;
+      padding-top: 0px;
+      font-weight: lighter;
+      border-bottom-style: inset;
+      border-bottom-width: 0.075vw;
+
+      border-color: orange;
+      width: 100%;
+
+    }
+
+    .right .recipe {
+      padding-left: 0.15vw;
+      padding-top: 0.375vw;
+      font-size: 0.975vw;
+    }
+
+    .left {
+      float: left;
+      width: 17.125vw;
+    }
+
+    .top {
+      box-sizing: border-box;
+
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(95, 214, 111, 0.5), rgba(88, 113, 165, 0.8)), url(https://source.unsplash.com/1600x1200/?guitar);
+    }
+
+    .card1 {
+      height: 34.125vw;
+      width: 37.5vw;
+      box-shadow: 0px 1.125vw 1.875vw 0px rgba(153, 153, 153, 0.5);
+      border-radius: 0.3vw;
+      background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(92, 228, 110, 0.5), rgba(88, 113, 165, 0.8));
+      margin-left: 7.5vw;
+      margin-bottom: 5.25vw;
+      margin-top: 5.25vw;
+
+
+    }
+
+    .card1:hover {
+      background-image: linear-gradient(rgba(133, 87, 87, 0.7), rgba(95, 176, 214, 0.7), rgba(165, 110, 88, 0.849));
+      box-shadow: 0.75vw 1.125vw 1.875vw 0.75vw rgba(153, 153, 153, 0.8);
+    }
+
+    .card2 {
+      height: 34.125vw;
+      width: 37.5vw;
+      box-shadow: 0px 1.125vw 1.875vw 0px rgba(153, 153, 153, 0.5);
+      border-radius: 0.3vw;
+      background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(95, 214, 111, 0.5), rgba(57, 87, 59, 0.8));
+      margin-left: 22.5vw
+    }
+
+    .card2:hover {
+      box-shadow: 0.75vw 1.125vw 1.875vw 0.75vw rgba(153, 153, 153, 0.5);
+      background-image: linear-gradient(rgba(129, 43, 43, 0.5), rgba(23, 97, 33, 0.5), rgba(44, 168, 52, 0.8));
+    }
+
+    .top {
+      height: 90%;
+      border-radius: 0.3vw 0px 0px 0.3vw;
+      border: 0vw solid #ddd;
+      /* Setting a background image */
+
+      padding: 0vw 1.2vw;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      background-color: rgba(#1f4135, 0.5);
+    }
+
+    #top1 {
+      background-image: url(guit3.jpeg);
+    }
+
+    #top2 {
+      background-image: url(guit2.jpeg);
+    }
+
+    #top3 {
+      background-image: url(guit33.jpg);
+    }
+
+    #top4 {
+      background-image: url(guit4.jpeg);
+    }
+
+    .name {
+      padding-top: calc(35.625vw * 0.70);
+      margin: 0px;
+      text-shadow: 0.15vw 0.15vw red;
+      color: white;
+      font-size: 150%;
+    }
+
+    .veg {
+      display: inline-block;
+      width: 0.5vw;
+      height: 0.5vw;
+      margin-left: 0.3vw;
+
+      border-radius: 0.375vw;
+      background-color: rgb(44, 216, 10);
+    }
+
+    .non-veg {
+      display: inline-block;
+      width: 0.5vw;
+      height: 0.5vw;
+      margin-left: 0.3vw;
+
+      border-radius: 0.375vw;
+      background-color: rgb(61, 5, 5);
+    }
+
+    .cook-time {
+      margin-top: 0.6vw;
+    }
+
+    .middle {
+      height: 5%;
+      border-top: 0.075vw solid #ddd;
+      border-bottom: 0.075vw solid #ddd;
+      padding: 0.075vw 0px;
+
+    }
+
+    #serv {
+      color: #444;
+      font-size: 1.15vw;
+      padding-top: 0.15vw;
+      padding-left: 0.75vw;
+
+    }
+
+    #serv:hover {
+      text-shadow: 0.15vw 0.15vw white;
+      color: black;
+    }
+
+    .bottom {
+      height: 10%;
+
+      border-radius: 0vw 0vw 0.3vw 0.3vw;
+      border: 00vw solid #ddd;
+      padding: 0vw 0.3vw;
+      background-color: rgb(128, 128, 128);
+
+    }
+
+    .profile-action {
+      display: block;
+      width: 80%;
+      height: 2.4vw;
+      /* You could also just set the font family explicitly like we did for the body. */
+      font-family: inherit;
+      font-size: 0.75vw;
+      text-align: left;
+      /* The border-radius property allows for round corners. */
+      border-radius: 0.3vw;
+      border: 0px;
+      background-color: #fff;
+      /* This is how we changed the cursor to be a hand instead of an arrow. */
+
+      float: left;
+    }
+
+    .profile-action:hover {
+      background-color: #00A5D2;
+      color: white;
+    }
+
+    .bottom .like {
+
+      padding-top: 0.525vw;
+      padding-bottom: 0.375vw;
+      float: right;
+      background-color: gray;
+      display: block;
+      height: 1.875vw;
+      font-size: 0.75vw;
+      border-radius: 0.3vw;
+      border: 0px;
+      cursor: pointer;
+    }
+
+    .bottom .like:hover {
+      background-color: lemonchiffon;
+      height: 2.25vw;
+    }
+
+    .by {
+      font-size: 140%;
+      text-transform: capitalize;
+      font-family: cursive;
+      padding-left: 0.75vw;
+    }
+
+    .buy {
+      background-color: green;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><strong>Music</strong> Center</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="trackdemo.php">Track Order</a></li>
+          <li><a href="/logout">Logout</a></li>
+          <li><a href="tutordemo.php">Training</a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><strong>Call: </strong>+91-456-567-890</a></li>
+              <li><a href="#"><strong>Mail: </strong>info@musiccenter.com</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><strong>Address: </strong>
+                  <div>
+                    Shop #20, Yelahanka New Town,<br />
+                    Bengaluru, India
+                  </div>
+                </a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+          </div>
+          &nbsp;
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <div class="content">
+    <section>
+      <div class="card1">
+        <div class="left">
+          <div class="top" id="top1">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Electric guitar <span class="veg"></span></h3>
+            <p class="cook-time">Price : 2000/-</p>
+          </div>
+          <div class="middle">
+            <div id="serv">Warantty: 1 year</div>
+          </div>
+          <div class="bottom">
+            <button class="profile-action">Brand <span class="by">Juârez</span> </button>
+            <div class="like">
+              <button>Like <span>&#128077</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+
+          <p class="ingre"><span class="h3">Specifications :</span><br>
+            <b>Brand</b> Juârez<br>
+            <b>Model Number</b> 1231 <br>
+            <!--JRZ-38C-LGP-BK-->
+            <b>Colour</b> Black<br>
+            <b>Body Material</b> Wood<br>
+            <b>Fretboard Material</b> Ebony<br>
+            <b>String Material</b> Steel<br>
+
+          </p>
+
+          <p class="recipe"><span class="h2">About this instrument :</span><br>
+
+            Black Glossy Finish, Number of Frets: 18, Acoustic Guitar with strap, Bag, Strings and 2 Picks<br>
+            Great looks with an innovative design to produce good quality sound<br>
+            Finger board: Linden Wood, Fretboard - Ebony Wood, Size: 38 inches, Cutaway<br>
+            Included components: Acoustic Guitar with strap, Bag, Strings and 2 Picks<br>
+            Linden Binding and Full Wood Construction with Geared Tuning, Wood Frame and Steel Strings<br>
+
+
+          </p>
+
+          <div class='dropdown'>
+
+            <button type='button' onclick='mydrop()' class='dropbtn' id='buyButton'>Buy it</button>
+            <div id='myDropdown' class='dropdown-content'>
+              <form action="/" method='post' name="reg_form" class="reg_card" id="regi">
+                <table class="reg_table">
+                  <tr class="row">
+                    <td class="td">Enter model number</td>
+                    <td>
+                      <input type="number" name='imodel' placeholder="model number mention above" pattern=""
+                        title="expecting a valid model number" class="naam" required>
+                    </td>
+                  </tr>
+
+                  <tr class="row">
+                    <td class="td">Name</td>
+                    <td>
+                      <input type="text" name='nam' placeholder="Full Name" pattern="[A-z]{1,250}"
+                        title="Name must be 1 to 25 'letters' only" class="naam" required>
+                    </td>
+                  </tr>
+
+                  </tr>
+                  <tr class="row">
+                    <td class="td">email</td>
+                    <td>
+                      <input type="email" name='email' placeholder="Email ID" title="Error" class="naam" required>
+                    </td>
+                  </tr>
+
+
+                  <tr class="row">
+                    <td class="td">Location</td>
+                    <td>
+                      <input id="ph" type="text" name='phone' title="Location" required value=""
+                        placeholder="Drop Location" required>
+                    </td>
+                  </tr>
+
+
+
+                </table>
+                <div class="reg_submit">
+                  <input type="submit" value="Confirm my order" name="submit" class="smt" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="left">
+          <div class="top" id="top2">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Linden Wood Acoustic Guita <span class="non-veg"></span></h3>
+            <p class="cook-time">Price : 2590/-</p>
+          </div>
+          <div class="middle">
+            <div id="serv">Warantty: 2 year</div>
+          </div>
+          <div class="bottom">
+            <button class="profile-action">Brand <span class="by">Revel</span> </button>
+            <div class="like">
+              <button>Like <span>&#128077</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+
+          <p class="ingre"><span class="h3">Specifications :</span><br>
+            <b>Brand</b> Revel<br>
+
+            <b>Model Number</b> 4757 <br>
+            <!--RVL-38C-LGP-BK-->
+            <b>Color</b> Black<br>
+
+            <b>Body Material</b> Linden Wood<br>
+            <b>Fretboard Material</b> Ebony<br>
+            <b>String Material</b> Steel<br>
+
+
+
+
+
+          </p>
+
+          <p class="recipe"><span class="h2">About this instrument :</span><br><br>
+            Black Glossy Finish, Number of Frets: 18, Acoustic Guitar with strap, Bag, Strings and 2 Picks<br>
+            Great looks with an innovative design to produce good quality sound<br>
+            Finger board: Linden Wood, Fretboard - Ebony Wood, Size: 38 inches, Cutaway<br>
+            Included components: Acoustic Guitar with strap, Bag, Strings and 2 Picks<br>
+            Linden Binding and Full Wood Construction with Geared Tuning, Wood Frame and Steel Strings<br>
+          </p>
+          <button class="buy">Buy this</button>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="left">
+          <div class="top" id="top3">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Kadence Frontier 40" KFQ-10 <span class="non-veg"></span></h3>
+            <p class="cook-time">Warantty: 2 year</p>
+          </div>
+          <div class="middle">
+            <div id="serv">Price : 8250/-</div>
+          </div>
+          <div class="bottom">
+            <button class="profile-action">Brand <span class="by">Kadence</span> </button>
+            <div class="like">
+              <button>Like <span>&#128077</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+
+          <p class="ingre"><span class="h3">Specifications :</span><br>
+            <b>Brand</b> Kadence<br>
+
+            <b>Model Number</b> 2103 <br>
+            <!--KAD-Q10-SUN-EQ-->
+            <b>Color</b> Sunburst<br>
+
+            <b>Body Material</b> Wood<br>
+            <b>Fretboard Material</b> Ebony<br>
+            <b>String Material</b> Steel<br>
+
+
+          </p>
+
+          <p class="recipe"><span class="h2">About this instrument :</span><br>
+
+            Built for great sound, high durability
+            It is with Hand Rest Sunburst
+            Beginner or a Pro, the Frontier Series is here to cover your melodic front
+
+
+          </p>
+          <button class="buy">Buy this</button>
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="left">
+          <div class="top" id="top4">
+            <!-- Here we changed the word from 'Stufent' to 'Student' -->
+            <h3 class="name">Juarez 6-String Electric Guitar <span class="veg"></span></h3>
+            <p class="cook-time">Warantty: 1 year</p>
+          </div>
+          <div class="middle">
+            <div id="serv">Price : 2240/-</div>
+          </div>
+          <div class="bottom">
+            <button class="profile-action">Brand <span class="by">Juarez</span> </button>
+            <div class="like">
+              <button>Like <span>&#128077</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+
+          <p class="ingre"><span class="h3">Specifications :</span><br>
+            <b>Brand</b> JUAREZ<br>
+
+            <b>Model Number</b> 3278 <br>
+            <!--JRZ-ST02-->
+            <b>Color</b> Red<br>
+
+            <b>Body Material</b> Wood<br>
+            <b>Fretboard Material</b> Ebony<br>
+            <b>String Material</b> Steel<br>
+
+          </p>
+
+          <p class="recipe"><span class="h2">About this instrument :</span><br>
+
+            Black Glossy Finish, Number of Frets: 18, Acoustic Guitar with strap, Bag, Strings and 2 Picks<br>
+            Great looks with an innovative design to produce good quality sound<br>
+            Finger board: Linden Wood, Fretboard - Ebony Wood, Size: 38 inches, Cutaway<br>
+
+          </p>
+          <button class="buy">Buy this</button>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">&#1769 Top</button>
+  </header>
+  <script>
+    //Top Button function.....
+    function topFunction() {
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    /*function mydrop()
+    {
+      document.getElementById('myDropdown').classList.toggle('show');
+    }
+    
+    window.onclick = function(event){
+      if(!event.target.matches('.dropbtn')){
+        var dropdowns = document.getElementByClassName(''dropdown-content);
+        var i;
+        for(i=0; i< dropdowns.length; i++){
+          var openDropdown = dropdowns[i];
+          if(openDropdown.classList.contains('show')){
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }*/
+    $(document).ready(function () {
+      $('#buyButton').click(function () {
+        $('#regi').toggle();
+      });
+    });
+  </script>
+</body>
